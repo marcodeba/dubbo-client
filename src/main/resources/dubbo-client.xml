@@ -10,5 +10,9 @@
     <dubbo:registry address="zookeeper://localhost:2181"/>
 
     <dubbo:reference id="gpHelloService"
-                     interface="com.gupaoedu.dubbo.IGpHello" protocol="dubbo" version="1.0.1"/>
+                     interface="com.gupaoedu.dubbo.IGpHello"
+                     version="1.0.1"
+                     mock="com.gupaoedu.dubbo.MockTest"
+                     timeout="1"
+    />
 </beans>
