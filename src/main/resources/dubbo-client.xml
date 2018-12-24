@@ -13,6 +13,6 @@
                      interface="com.gupaoedu.dubbo.IGpHello"
                      version="1.0.1"
                      mock="com.gupaoedu.dubbo.MockTest"
-                     timeout="1"
+                     timeout="1000"
     />
 </beans>
