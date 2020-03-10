@@ -9,7 +9,7 @@ public class Client {
     public static void main(String[] args) throws IOException {
         ApplicationContext context = new ClassPathXmlApplicationContext("dubbo-client.xml");
         //得到IGpHello的远程代理对象
-        IGpHello iGpHello = (IGpHello) context.getBean("gpHelloService");
+        IGpHello iGpHello = (IGpHello) context.getBean("helloService");
         System.out.println(iGpHello.sayHello("Mic"));
         System.in.read();
     }

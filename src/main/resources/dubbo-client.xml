@@ -2,16 +2,17 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans.xsd        http://code.alibabatech.com/schema/dubbo        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <!--提供方信息-->
     <dubbo:application name="dubbo-client" owner="mic"/>
-
     <!--注册中心-->
     <dubbo:registry address="zookeeper://localhost:2181"/>
-
-    <dubbo:reference id="gpHelloService"
+    <dubbo:reference id="helloService"
                      interface="com.gupaoedu.dubbo.IGpHello"
                      version="1.0.1"
                      mock="com.gupaoedu.dubbo.MockTest"
-                     timeout="1000"/>
+                     timeout="2000"/>
 </beans>
